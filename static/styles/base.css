@@ -545,23 +545,23 @@ body.dark .logo img {
 
 /* Carousel on home page */
 .carousel .carousel-item {
-	height: 20em;
+	height: 35em;
   }
 .carousel .carousel-item > *:first-child {
 	background-position: 50%;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	height: inherit;
   }
 
   /* Search bar on home page */
   .searchbar{
-    margin-bottom: auto;
-    margin-top: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
     height: 60px;
     background-color: #353b48;
     border-radius: 30px;
-    padding: 10px;
+    padding: 30px;
     }
 
     .search_input{
