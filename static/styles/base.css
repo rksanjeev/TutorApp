@@ -23,6 +23,7 @@ body{
 	line-height: 24px;
 	font-weight: 400;
 	color: #fff;
+	background-color: #fcfaff;
 	overflow-x: hidden;
     transition: all 200ms linear;
 }
@@ -546,6 +547,7 @@ body.dark .logo img {
 /* Carousel on home page */
 .carousel .carousel-item {
 	height: 35em;
+	padding-bottom: 20px;
   }
 .carousel .carousel-item > *:first-child {
 	background-position: 50%;
@@ -556,8 +558,8 @@ body.dark .logo img {
 
   /* Search bar on home page */
   .searchbar{
-    margin-bottom: 5px;
-    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     height: 60px;
     background-color: #353b48;
     border-radius: 30px;
