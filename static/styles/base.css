@@ -542,3 +542,14 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 body.dark .logo img {
   filter: brightness(100%);
 }
+
+
+.carousel .carousel-item {
+	height: 20em;
+  }
+.carousel .carousel-item > *:first-child {
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: inherit;
+  }
