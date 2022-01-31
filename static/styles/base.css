@@ -565,7 +565,7 @@ body.dark .logo img {
     margin-top: 30px;
     height: 60px;
     background-color: #353b48;
-    border-radius: 30px;
+    border-radius: 30%;
     padding: 10px;
     }
 
@@ -574,7 +574,7 @@ body.dark .logo img {
     border: 0;
     outline: 0;
     background: none;
-    width: 450px;
+    width: 45%;
     line-height: 40px;
     padding: 0 10px;
     caret-color:red;
