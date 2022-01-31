@@ -22,11 +22,12 @@ body{
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 400;
-	color: #fff;
+	color: #36454f;
 	background-color: #fcfaff;
 	overflow-x: hidden;
     transition: all 200ms linear;
 	min-height: 900px;
+	
 	
 }
 
@@ -550,6 +551,7 @@ body.dark .logo img {
 .carousel .carousel-item {
 	height: 35em;
 	padding-bottom: 20px;
+	box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
   }
 .carousel .carousel-item > *:first-child {
 	background-position: 50%;
@@ -560,7 +562,7 @@ body.dark .logo img {
 
   /* Search bar on home page */
   .searchbar{
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     margin-top: 20px;
     height: 60px;
     background-color: #353b48;
