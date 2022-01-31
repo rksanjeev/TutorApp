@@ -26,6 +26,8 @@ body{
 	background-color: #fcfaff;
 	overflow-x: hidden;
     transition: all 200ms linear;
+	min-height: 900px;
+	
 }
 
 
@@ -559,11 +561,11 @@ body.dark .logo img {
   /* Search bar on home page */
   .searchbar{
     margin-bottom: 0px;
-    margin-top: 0px;
+    margin-top: 20px;
     height: 60px;
     background-color: #353b48;
     border-radius: 30px;
-    padding: 30px;
+    padding: 10px;
     }
 
     .search_input{
