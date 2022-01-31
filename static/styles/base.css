@@ -543,7 +543,7 @@ body.dark .logo img {
   filter: brightness(100%);
 }
 
-
+/* Carousel on home page */
 .carousel .carousel-item {
 	height: 20em;
   }
@@ -553,3 +553,39 @@ body.dark .logo img {
 	background-size: cover;
 	height: inherit;
   }
+
+  /* Search bar on home page */
+  .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 450px;
+    line-height: 40px;
+    padding: 0 10px;
+    caret-color:red;
+    transition: width 0.4s linear;
+    }
+
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration:none;
+    background: white;
+    color: #e74c3c;
+    }
