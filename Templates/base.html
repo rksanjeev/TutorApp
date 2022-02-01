@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{% static "styles/base.css" %}">
     <link rel="stylesheet" href="{% static "styles/footer.css" %}">
     <script src="{% static "scripts/base.js"%}"></script>
-
+    {% block scripts %}  {% endblock %}
 </head>
 
 <body class="hero-anime">	
@@ -38,7 +38,7 @@
 									<a class="nav-link" href="#">Home</a>
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="#">Contact Us</a>
+									<a class="nav-link" href="{% url "home:contact" %}">Contact Us</a>
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
 									<a class="nav-link" href="#">Sign In</a>
@@ -93,9 +93,9 @@
               <!-- Footer Menu-->
               <div class="footer_menu">
                 <ul>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Privacy policy</a></li>
+                  <li><a href="{% url "home:about" %}">About Us</a></li>
+                  <li><a href="{% url "home:contact" %}">Contact Us</a></li>
+                  <li><a href="{% url "home:Privacy" %}">Privacy policy</a></li>
                 </ul>
               </div>
             </div>

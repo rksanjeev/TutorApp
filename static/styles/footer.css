@@ -110,7 +110,8 @@ body{margin-top:20px;}
 .single-footer-widget .footer_menu li a:hover,
 .single-footer-widget .footer_menu li a:focus {
     color: #008AD8;
-    border-left: 3px solid  #008AD8;  
+    border-left: 3px solid  #008AD8;
+    padding-left: 3px;  
     text-decoration: none;
 }
 .single-footer-widget .footer_menu li:last-child a {
