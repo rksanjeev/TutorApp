@@ -29,6 +29,21 @@
                           </div>
                                 <form method="POST" id="contactForm" name="contactForm" class="contactForm">
                                     {% csrf_token %}
+                                    
+                                    {% if form.errors %}
+                                    <div class="alert alert-danger" role="alert">
+                                        Please fill in correct details to proceed.
+                                    </div>
+                                    {% else %}
+                                        {% if submitted %}
+                                             <div class="alert alert-success" role="alert">
+                                            Thank you! We will get backk to you soon.
+                                        </div>
+                                        {% endif %}
+                                    {% endif %}
+
+
+                                    
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -38,14 +53,20 @@
                                         </div>
                                         <div class="col-md-6"> 
                                             <div class="form-group">
-                                                <label class="label" for="{{ form.name.id_for_email }}">Email Address</label>
-                                                <input type="email" class="form-control" name="{{ form.name.id_for_email }}" id="email" placeholder="Email">
+                                                <label class="label" for="{{ form.name.id_for_phone }}">Phone Number</label>
+                                                <input type="text" class="form-control" id="{{ form.name.id_for_phone }}" name="phone" placeholder="phone" maxlength="10">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" for="{{ form.name.id_for_email }}">E-mail</label>
+                                                <input type="email" class="form-control" id="{{ form.name.id_for_email }}" name="email" placeholder="abc@example.com">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="label" for="{{ form.name.id_for_subject }}">Subject</label>
-                                                <input type="text" class="form-control" name="{{ form.name.id_for_subject }}" id="subject" placeholder="Subject">
+                                                <input type="text" class="form-control" id="{{ form.name.id_for_subject }}" name="subject" placeholder="Subject" maxlength="254">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
