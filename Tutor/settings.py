@@ -129,6 +129,7 @@ STATICFILES_DIRS = [ BASE_DIR / "static", BASE_DIR / "static/styles",  BASE_DIR 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CSRF_TRUSTED_ORIGINS = ['https://arcane-tundra-50340.herokuapp.com']
 
 # CORS Setup
 CORS_ALLOW_ALL_ORIGINS = True
