@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from pickle import APPEND
 import django_heroku
 
 
@@ -24,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = ''
+# SECRET_KEY = 'dummysecretkey'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -130,7 +129,7 @@ STATICFILES_DIRS = [ BASE_DIR / "static", BASE_DIR / "static/styles",  BASE_DIR 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://arcane-tundra-50340.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://arcane-tundra-50340.herokuapp.com', 'http://localhost', 'http://127.0.0.1']
 
 # CORS Setup
 CORS_ALLOW_ALL_ORIGINS = True
@@ -151,6 +150,6 @@ CORS_ALLOW_HEADERS = [
 ]
 
 #  Heroku Settings Import 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 APPEND_SLASH = True

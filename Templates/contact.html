@@ -31,14 +31,22 @@
                                     {% csrf_token %}
                                     
                                     {% if form.errors %}
-                                    <div class="alert alert-danger" role="alert">
-                                        Please fill in correct details to proceed.
+                                    <div class="alert alert-dismissible alert-danger" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert">
+                                            ×
+                                            </button>
+                                       <strong> Please fill in correct details to proceed. </strong>
                                     </div>
                                     {% else %}
-                                        {% if submitted %}
-                                             <div class="alert alert-success" role="alert">
-                                            Thank you! We will get backk to you soon.
-                                        </div>
+                                        {% if messages %}
+                                        {% for alertmessage in messages %}
+                                            <div class="alert alert-dismissible alert-success">
+                                            <button type="button" class="close" data-dismiss="alert">
+                                            ×
+                                            </button>
+                                            <strong>{{alertmessage}}<strong>
+                                            </div>
+                                        {% endfor %}
                                         {% endif %}
                                     {% endif %}
 
@@ -47,32 +55,32 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label class="label" for="{{ form.name.id_for_name }}">Full Name</label>
-                                                <input type="text" class="form-control" name="name" id="{{ form.name.id_for_name }}" placeholder="Name">
+                                                <label class="label" for="{{ form.name.auto_id }}">Full Name</label>
+                                                <input type="text" class="form-control" name="name" id="{{ form.name.auto_id }}" placeholder="Name">
                                             </div>
                                         </div>
                                         <div class="col-md-6"> 
                                             <div class="form-group">
-                                                <label class="label" for="{{ form.name.id_for_phone }}">Phone Number</label>
-                                                <input type="text" class="form-control" id="{{ form.name.id_for_phone }}" name="phone" placeholder="phone" maxlength="10">
+                                                <label class="label" for="{{ form.phone.auto_id }}">Phone Number</label>
+                                                <input type="text" class="form-control" id="{{ form.phone.auto_id }}" name="phone" placeholder="phone" maxlength="10">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label class="label" for="{{ form.name.id_for_email }}">E-mail</label>
-                                                <input type="email" class="form-control" id="{{ form.name.id_for_email }}" name="email" placeholder="abc@example.com">
+                                                <label class="label" for="{{ form.email.auto_id }}">E-mail</label>
+                                                <input type="email" class="form-control" id="{{ form.email.auto_id }}" name="email" placeholder="abc@example.com">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label class="label" for="{{ form.name.id_for_subject }}">Subject</label>
-                                                <input type="text" class="form-control" id="{{ form.name.id_for_subject }}" name="subject" placeholder="Subject" maxlength="254">
+                                                <label class="label" for="{{ form.subject.auto_id }}">Subject</label>
+                                                <input type="text" class="form-control" id="{{ form.subject.auto_id }}" name="subject" placeholder="Subject" maxlength="254">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label class="label" for="{{ form.name.id_for_message }}">Message</label>
-                                                <textarea name="message" class="form-control" id="{{ form.name.id_for_message }}" cols="30" rows="4" placeholder="Message"></textarea>
+                                                <label class="label" for="{{ form.message.auto_id }}">Message</label>
+                                                <textarea name="message" class="form-control" id="{{ form.message.auto_id }}" cols="30" rows="4" placeholder="Message"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12">

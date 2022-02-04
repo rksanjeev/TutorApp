@@ -1,7 +1,7 @@
-from re import template
-from sre_constants import SUCCESS
-from django.shortcuts import render
-from django.views.generic import TemplateView, FormView
+from django.shortcuts import redirect
+from django.views.generic import TemplateView
+from django.views.generic.edit import FormView
+from django.contrib import messages
 from . import forms
 # Create your views here.
 
@@ -15,6 +15,11 @@ class ContactPage(FormView):
     template_name = 'contact.html'
     form_class = forms.ContactForm
     success_url = '/contact'
+
+    def form_valid(self, form):
+        messages.success(self.request, 'Contact request submitted successfully.')
+        form.save()
+        return redirect(self.success_url )
     
 
 class PrivacyPage(TemplateView):

@@ -8,7 +8,10 @@ class LeadModel(models.Model):
     email = models.EmailField(unique=True)
     subject = models.TextField(max_length=255, null=False)
     message = models.TextField(max_length=255, blank=False, null=False)
-    phone = models.BigIntegerField(max_length=10, blank=False, null=True)
+    phone = models.BigIntegerField(blank=False, null=True)
     date = models.DateField(auto_now_add=True)
+
+    def save(self) -> None:
+        return super().save()
 
 

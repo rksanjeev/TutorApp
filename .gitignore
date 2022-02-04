@@ -5,6 +5,7 @@ __pycache__
 *.db
 .idea
 .vscode
-*.sqllite3
+*.sqlite3
 .replit
 *.sql
+migrations
