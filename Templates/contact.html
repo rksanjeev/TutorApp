@@ -28,7 +28,7 @@
                         Your message was sent, thank you!
                           </div>
                                 <form method="POST" id="contactForm" name="contactForm" class="contactForm">
-                                    <div class="row">
+                                    <!-- <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="label" for="name">Full Name</label>
@@ -59,7 +59,14 @@
                                                 <div class="submitting"></div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
+
+                                {% csrf_token %}
+                                {% for field in form %}
+                                    {{ field }}
+                                {% endfor %}
+
+
                                 </form>
                             </div>
                         </div>
