@@ -20,5 +20,5 @@ app_name = "tutor"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include(homeurl, namespace="home")),
+    path('/', include(homeurl, namespace="home")),
 ]
