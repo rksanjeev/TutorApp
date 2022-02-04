@@ -1,4 +1,5 @@
 from re import template
+from sre_constants import SUCCESS
 from django.shortcuts import render
 from django.views.generic import TemplateView, FormView
 from . import forms
@@ -13,6 +14,7 @@ class AboutPage(TemplateView):
 class ContactPage(FormView):
     template_name = 'contact.html'
     form_class = forms.ContactForm
+    success_url = 'home:index'
     
 
 class PrivacyPage(TemplateView):
