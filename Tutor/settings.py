@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from pickle import APPEND
 import django_heroku
 
 
@@ -151,3 +152,5 @@ CORS_ALLOW_HEADERS = [
 
 #  Heroku Settings Import 
 django_heroku.settings(locals())
+
+APPEND_SLASH = True
