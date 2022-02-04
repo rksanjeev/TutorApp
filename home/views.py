@@ -14,7 +14,7 @@ class AboutPage(TemplateView):
 class ContactPage(FormView):
     template_name = 'contact.html'
     form_class = forms.ContactForm
-    success_url = 'contact'
+    success_url = '/url fixcontact'
     
 
 class PrivacyPage(TemplateView):
