@@ -28,29 +28,30 @@
                         Your message was sent, thank you!
                           </div>
                                 <form method="POST" id="contactForm" name="contactForm" class="contactForm">
-                                    <!-- <div class="row">
+                                    {% csrf_token %}
+                                    <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label class="label" for="name">Full Name</label>
-                                                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                                                <label class="label" for="{{ form.name.id_for_name }}">Full Name</label>
+                                                <input type="text" class="form-control" name="name" id="{{ form.name.id_for_name }}" placeholder="Name">
                                             </div>
                                         </div>
                                         <div class="col-md-6"> 
                                             <div class="form-group">
-                                                <label class="label" for="email">Email Address</label>
-                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                                <label class="label" for="{{ form.name.id_for_email }}">Email Address</label>
+                                                <input type="email" class="form-control" name="{{ form.name.id_for_email }}" id="email" placeholder="Email">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label class="label" for="subject">Subject</label>
-                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                                <label class="label" for="{{ form.name.id_for_subject }}">Subject</label>
+                                                <input type="text" class="form-control" name="{{ form.name.id_for_subject }}" id="subject" placeholder="Subject">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label class="label" for="#">Message</label>
-                                                <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+                                                <label class="label" for="{{ form.name.id_for_message }}">Message</label>
+                                                <textarea name="message" class="form-control" id="{{ form.name.id_for_message }}" cols="30" rows="4" placeholder="Message"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -59,13 +60,7 @@
                                                 <div class="submitting"></div>
                                             </div>
                                         </div>
-                                    </div> -->
-
-                                {% csrf_token %}
-                                {% for field in form %}
-                                    {{ field }}
-                                {% endfor %}
-
+                                    </div>
 
                                 </form>
                             </div>
