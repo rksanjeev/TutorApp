@@ -9,5 +9,6 @@ urlpatterns = [
     path('ExamPreprationServices/', views.ExamPreprationServicesPage.as_view(), name='ExamPreprationServices'),
     path('CollegeAdmissionsGuidance/', views.CollegeAdmissionsGuidancePage.as_view(), name='CollegeAdmissionsGuidance'),
     path('contact/', views.ContactPage.as_view(), name='contact'),
+    path('login/', views.loginPage.as_view(), name='login'),
     path('privacy-policy/', views.PrivacyPage.as_view(), name='privacy'),
 ]

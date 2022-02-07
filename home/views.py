@@ -37,6 +37,9 @@ class ContactPage(FormView):
         form.save()
         return redirect(self.success_url )
     
-
+class SignInPage(FormView):
+    template_name = 'login.html'
+    
+    
 class PrivacyPage(TemplateView):
     template_name = 'privacy.html'
