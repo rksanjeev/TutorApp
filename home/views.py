@@ -12,7 +12,7 @@ class AboutPage(TemplateView):
     template_name = 'about.html'  
     
       
-class tutoringservicesPage(TemplateView):
+class TutoringServicesPage(TemplateView):
     template_name = 'tutoringservices.html' 
 
 class ExamPreprationServicesPage(TemplateView):
