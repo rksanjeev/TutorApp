@@ -9,7 +9,11 @@ class IndexPage(TemplateView):
     template_name = 'home.html'
 
 class AboutPage(TemplateView):
-    template_name = 'about.html'    
+    template_name = 'about.html'  
+    
+      
+class tutoringservicesPage(TemplateView):
+    template_name = 'tutoringservices.html' 
 
 class ContactPage(FormView):
     template_name = 'contact.html'
