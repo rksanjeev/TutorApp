@@ -8,3 +8,10 @@ class ContactForm(ModelForm):
         model = models.LeadModel
         fields = ('name', 'email', 'subject', 'message', 'phone')
 
+
+class loginForm(ModelForm):
+    class Meta:
+        model = models.LeadModel
+        fields = ('name', 'email', 'subject', 'message', 'phone')
+
+
