@@ -15,6 +15,13 @@ class AboutPage(TemplateView):
 class tutoringservicesPage(TemplateView):
     template_name = 'tutoringservices.html' 
 
+class ExamPreprationServicesPage(TemplateView):
+    template_name = 'ExamPreprationServices.html' 
+
+
+
+    
+
 class ContactPage(FormView):
     template_name = 'contact.html'
     form_class = forms.ContactForm
