@@ -20,12 +20,13 @@ class ExamPreprationServicesPage(TemplateView):
 
 
 class CollegeAdmissionsGuidancePage(TemplateView):
-    template_name = 'CollegeAdmissionsGuidance.html' 
+    template_name = 'CollegeAdmissionsGuidance.html'
 
 
 
-   
 
+
+  
 
 class ContactPage(FormView):
     template_name = 'contact.html'
@@ -36,9 +37,14 @@ class ContactPage(FormView):
         messages.success(self.request, 'Contact request submitted successfully.')
         form.save()
         return redirect(self.success_url )
-    
-class SignInPage(FormView):
+
+
+class loginPage(FormView):
     template_name = 'login.html'
+    form_class = forms.loginForm
+    success_url = '/login'
+    
+
     
     
 class PrivacyPage(TemplateView):

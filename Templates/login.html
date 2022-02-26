@@ -1,10 +1,11 @@
 {% extends "base.html"%}
 {% load static %}
-{% block title %}Log In | Tutor{% endblock %}
+{% block title %}Sign In | Tutor{% endblock %}
 
 {% block scripts %} 
 <link rel="stylesheet" href="{% static "styles/contact-animate.css" %}">
 <link rel="stylesheet" href="{% static "styles/contact-style.css" %}">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>  
 <script src="{% static "scripts/google-map.js" %}"></script>
 <script src="{% static "scripts/jquery.validate.min.js" %}"></script>
 <script src="{% static "scripts/contact-main.js" %}"></script>
@@ -53,8 +54,42 @@
 
                                     
                                     <div class="row">
-                                        
-                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="label" for="{{ form.name.auto_id }}">Full Name</label>
+                                                <input type="text" class="form-control" name="name" id="{{ form.name.auto_id }}" placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="form-group">
+                                                <label class="label" for="{{ form.phone.auto_id }}">Phone Number</label>
+                                                <input type="text" class="form-control" id="{{ form.phone.auto_id }}" name="phone" placeholder="phone" maxlength="10">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" for="{{ form.email.auto_id }}">E-mail</label>
+                                                <input type="email" class="form-control" id="{{ form.email.auto_id }}" name="email" placeholder="abc@example.com">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" for="{{ form.subject.auto_id }}">Subject</label>
+                                                <input type="text" class="form-control" id="{{ form.subject.auto_id }}" name="subject" placeholder="Subject" maxlength="254">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class="label" for="{{ form.message.auto_id }}">Message</label>
+                                                <textarea name="message" class="form-control" id="{{ form.message.auto_id }}" cols="30" rows="4" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" value="Send Message" class="btn btn-primary">
+                                                <div class="submitting"></div>
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </form>
@@ -65,7 +100,48 @@
                   </div>
                         </div>
                     </div>
-                    
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fa fa-map-marker"></span>
+                        </div>
+                        <div class="text">
+                        <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                      </div>
+                  </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fa fa-phone"></span>
+                        </div>
+                        <div class="text">
+                        <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                      </div>
+                  </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fa fa-paper-plane"></span>
+                        </div>
+                        <div class="text">
+                        <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                      </div>
+                  </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="dbox w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fa fa-globe"></span>
+                        </div>
+                        <div class="text">
+                        <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                      </div>
+                  </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
