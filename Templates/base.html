@@ -40,9 +40,16 @@
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
 									<a class="nav-link" href="{% url "home:contact" %}">Contact Us</a>
 								</li>
+                {% if user.is_authenticated() %}
+                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="#">Logout</a>
+								</li>
+                {% else %}
+
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
 									<a class="nav-link" href="#">Sign In</a>
 								</li>
+                {% endif %}
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
 									<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Register</a>
 									<div class="dropdown-menu">

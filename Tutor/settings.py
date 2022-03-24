@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'home',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -158,3 +159,4 @@ CORS_ALLOW_HEADERS = [
 django_heroku.settings(locals())
 
 APPEND_SLASH = True
+AUTH_USER_MODEL = 'user.UserModel'

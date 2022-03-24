@@ -5,6 +5,8 @@ from django.contrib import messages
 from . import forms
 # Create your views here.
 
+# Static Pages
+
 class IndexPage(TemplateView):
     template_name = 'home.html'
 
@@ -23,11 +25,6 @@ class CollegeAdmissionsGuidancePage(TemplateView):
     template_name = 'CollegeAdmissionsGuidance.html'
 
 
-
-
-
-  
-
 class ContactPage(FormView):
     template_name = 'contact.html'
     form_class = forms.ContactForm
@@ -39,13 +36,10 @@ class ContactPage(FormView):
         return redirect(self.success_url )
 
 
-class loginPage(FormView):
-    template_name = 'login.html'
-    form_class = forms.loginForm
-    success_url = '/login'
-    
-
-    
-    
 class PrivacyPage(TemplateView):
     template_name = 'privacy.html'
+
+
+
+
+
